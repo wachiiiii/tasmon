@@ -10,22 +10,30 @@
         <link rel="stylesheet" href="css/style.css">
         <script src="js/cssua.min.js"></script>
         <script src="js/app.js"></script>
-        <title>tasumon|ホーム</title>
+        <script src="js/script.js"></script>
+        <title>tasmon|ホーム</title>
     </head>
 
 <body>
+<header>
 <h1>タスモンの家</h1>
+</header>
+
+<img src="img/nor_mon/tasmon1-1.svg" alt="タスモン">
 
 <div class="h_input">
-<a href="#" class="h_input1">タスク入力</a>
-<a href="#" class="h_input2">着せ替え</a>
+<a class="h_input1 input" href="newtask/index.html">タスク入力</a>
+<a class="h_input2 input" href="">きせかえ</a>
 </div>
 
-<nav>
-<a href="index.html">ホーム</a>
-<a href="taskmangement/index.php">タスク一覧</a>
-<a href="dailyrecord/index.php">日々記録</a>
-<a href="collection/index.php">コレクション</a>
-</nav>
+<div data-role="footer" data-position="fixed" data-theme="e" id="foot" class="tab_area clearfix">
+<ul>
+  <li><img src="img/buttom/bt_p1.png" alt="ホーム"></li>
+  <li><a href="ichiran/index.html" onclick="checkForm();"><img src="img/buttom/bt_2.png" alt="タスク一覧"></a></li>
+  <li><a href="newtask/index.html"><img src="img/buttom/bt_3.png" alt="タスク入力"></a></li>
+  <li><a href="kiroku/index.html" onclick="checkDate();"><img src="img/buttom/bt_4.png" alt="日々記録"></a></li>
+  <li><a href="collection/index.html" onclick="completeTask();"><img src="img/buttom/bt_5.png" alt="コレクション"></a></li>
+</ul>
+</div>
 </body>
 </html>
