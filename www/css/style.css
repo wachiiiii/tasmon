@@ -19,12 +19,12 @@ a{
 ----------*/
 h1{
   margin: auto;
-  padding: 10px 0 10px 125px;
+  padding: 10px 0 10px 0;
   font-size: 20px;
   font-weight: lighter;
   color: #FFF;
   background-color: #200456;
-  position: relative;
+  text-align: center;
 }
 .h_input{
   position: absolute;
@@ -130,54 +130,32 @@ font-weight: bold;
 /*----------
 タスク入力
 ----------*/
-#form_txt{
-margin: 0 5px 20px 0; 
-padding: 10px 10px;
-border: solid 3px  #200456;
-background-color:#FFF;
-}
-
-#form_text p{
-color: #200456;
-font-weight: bold;
-}
-
-input.t_button.ui-btn-hidden{
-display       : inline-block;
-border-radius : 5%;
-font-size     : 11px;
-text-align    : center;
-padding       : 12px 34px;
-background    : #200456;
-color         : #ffffff;
-line-height   : 1em;
-transition    : .3s;
-border        : 2px solid #200456;
-}
-
 
 
 /*--------
 日々記録
 ---------*/
-div#kirokuIn{
+#judgeTable div{
 padding: 0.5em 1em;
 margin: 10px 0;
 border: double 10px #200456;
 background-color: #FFF;
 }
-div#kirokuIn h4{
+
+#judgeTable h4{
 color: #200456;
 font-weight: bold;
 font-size: 20px;
 text-align: center;
 }
-div#kirokuIn p{
+
+#judgeTable p{
 color: #200456;
 text-align: center;
-margin: 0; 
-padding: 0;
+font-weight: lighter;
+font-size: 15px;
 }
+
 
 /*--------
 コレクション
