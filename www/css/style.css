@@ -32,9 +32,9 @@ h1{
   right: 10px;
 }
 .h_input1{
+    margin: 90px 0px 10px 0px;
     width:150px;
     font-size:15px;
-    font-weight:bold;
     text-decoration:none;
     display:block;
     text-align:center;
@@ -82,17 +82,118 @@ h1{
   height: auto;
 }
 
+/*タスモンふわふわ効果*/
+
+.fuwafuwa {
+-webkit-animation:fuwafuwa 3s infinite linear alternate;
+animation:fuwafuwa 3s infinite linear alternate;
+}
+
+@-webkit-keyframes fuwafuwa {
+0% {-webkit-transform:translate(0, 0) rotate(-5deg);}
+50% {-webkit-transform:translate(0, -5px) rotate(0deg);}
+100% {-webkit-transform:translate(0, 0)rotate(5deg);}
+}
+
+@keyframes fuwafuwa {
+0% {transform:translate(0, 0) rotate(-5deg);}
+50% {transform:translate(0, -5px) rotate(0deg);}
+100% {transform:translate(0, 0)rotate(5deg);}
+}
+
+/*----------
+ホーム
+----------*/
+
+img.tasmon{
+width: 150px;
+max-height: 150px;
+margin: 200px 0px 0px 60px;
+}
+
 /*--------
 タスク一覧
 ---------*/
-#formTable{
-  border-style: none;
+#ichiran{
+background-color: #FFF;
 }
-#formTable td{
-margin: 50px 0; 
-border-width: 3px;
+#formTable div{
+  margin: 20px 0;
+  border: solid 3px  #200456;
+  background-color:#8177af;
+}
+#formTable div p{
 color: #200456;
 font-weight: bold;
-border-color:#200456;
-background-color:#8177af;
 }
+
+/*----------
+タスク入力
+----------*/
+#form_txt{
+margin: 0 5px 20px 0; 
+padding: 10px 10px;
+border: solid 3px  #200456;
+background-color:#FFF;
+}
+
+#form_text p{
+color: #200456;
+font-weight: bold;
+}
+
+input.t_button.ui-btn-hidden{
+display       : inline-block;
+border-radius : 5%;
+font-size     : 11px;
+text-align    : center;
+padding       : 12px 34px;
+background    : #200456;
+color         : #ffffff;
+line-height   : 1em;
+transition    : .3s;
+border        : 2px solid #200456;
+}
+
+
+
+/*--------
+日々記録
+---------*/
+div#kirokuIn{
+padding: 0.5em 1em;
+margin: 10px 0;
+border: double 10px #200456;
+background-color: #FFF;
+}
+div#kirokuIn h4{
+color: #200456;
+font-weight: bold;
+font-size: 20px;
+text-align: center;
+}
+div#kirokuIn p{
+color: #200456;
+text-align: center;
+margin: 0; 
+padding: 0;
+}
+
+/*--------
+コレクション
+---------*/
+section.ui-content img{
+text-align: center;
+width: 130px;
+height: auto;
+}
+
+#collTable div{
+width: 140px;
+height: 180px;
+margin: 20px 10px;
+padding: 10px 8px 10px 15px; 
+border: solid #200456;;
+}
+
+/*--------モーダル拡大表示---------*/
