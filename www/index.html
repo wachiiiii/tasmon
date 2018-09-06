@@ -10,20 +10,22 @@
         <link rel="stylesheet" href="css/style.css">
         <script src="js/cssua.min.js"></script>
         <script src="js/app.js"></script>
-        <script src="js/script.js"></script>
         <title>tasmon|ホーム</title>
     </head>
 
 <body>
+<div data-role="page" id="HomePage">
 <header>
 <h1>タスモンの家</h1>
 </header>
 
-<img src="img/nor_mon/tasmon1-1.svg" alt="タスモン">
+<img class="fuwafuwa tasmon" src="img/nor_mon/tasmon1-1.png" alt="タスモン1">
+<img class="fuwafuwa tasmon2" src="img/nor_mon/tasmon2-1.png" alt="タスモン2">
+<img class="fuwafuwa tasmon3" src="img/nor_mon/tasmon3-1.png" alt="タスモン3">
 
 <div class="h_input">
 <a class="h_input1 input" href="newtask/index.html">タスク入力</a>
-<a class="h_input2 input" href="">きせかえ</a>
+<!--<a class="h_input2 input" href="">きせかえ</a>-->
 </div>
 
 <div data-role="footer" data-position="fixed" data-theme="e" id="foot" class="tab_area clearfix">
@@ -34,6 +36,7 @@
   <li><a href="kiroku/index.html" onclick="checkDate();"><img src="img/buttom/bt_4.png" alt="日々記録"></a></li>
   <li><a href="collection/index.html" onclick="completeTask();"><img src="img/buttom/bt_5.png" alt="コレクション"></a></li>
 </ul>
+</div>
 </div>
 </body>
 </html>
