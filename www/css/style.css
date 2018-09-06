@@ -1,7 +1,12 @@
 @charset "UTF-8";
 body{
+  font-family: Helvetica, Arial, sans-serif /*{global-font-family}*/;
   width: auto;
-  margin: 0 auto;
+  margin: 50px auto 0;
+}
+.ui-content{
+  margin-top:50px;
+  margin-bottom: 54.5px;
 }
 a{
   text-decoration: none;
@@ -13,10 +18,33 @@ a{
     box-shadow: inset 0 0 2px rgba(128, 128, 128, 0.1);
     transform: translateY(2px);
 }
+input{
+-webkit-appearance: none;
+}
+
+/*-------------------
+ボタン共通スタイル指定
+--------------------*/
+input#comp,
+a.next,
+#step2 input{
+  margin: 15px auto;
+  padding: 8px 20%;
+  color: #200456;
+  border: solid 2px #200456;
+  border-radius: 60px;
+
+}
 
 /*----------
 ヘッダー部分
 ----------*/
+header{
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index:1000;
+}
 h1{
   margin: auto;
   padding: 10px 0 10px 0;
@@ -32,7 +60,7 @@ h1{
   right: 10px;
 }
 .h_input1{
-    margin: 90px 0px 10px 0px;
+    margin: 60px 0px 10px 0px;
     width:150px;
     font-size:15px;
     text-decoration:none;
@@ -62,7 +90,11 @@ h1{
 /*--------
 フッター部分
 ---------*/
-
+footer{
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
 #foot ul {
   display:block;
   margin:0;
@@ -71,7 +103,6 @@ h1{
   list-style-type:none;
   text-align:center;
   box-sizing:brder-box;
-  vertical-align: middle;
 }#foot li {
   float: left;
   width:20%;
@@ -108,7 +139,19 @@ animation:fuwafuwa 3s infinite linear alternate;
 img.tasmon{
 width: 150px;
 max-height: 150px;
-margin: 200px 0px 0px 60px;
+margin: 130px 0px 0px 60px;
+}
+
+img.tasmon2{
+width: 110px;
+max-height: 150px;
+margin: -30px 0px 0px 230px;
+}
+
+img.tasmon3{
+width: 150px;
+max-height: 150px;
+margin: -20px 0px 0px 50px;
 }
 
 /*--------
@@ -117,52 +160,240 @@ margin: 200px 0px 0px 60px;
 #ichiran{
 background-color: #FFF;
 }
-
-#formTable div{
+#ichiTable div{
   margin: 20px 0;
-  padding: 10px 0 10px 0;
   border: solid 3px  #200456;
   background-color:#8177af;
 }
-
-#formTable p.title{
-  font-size: 24px;
-}
-
-#formTable div p{
-margin: 5px 0;
-padding:0 0 0 20px; 
+#ichiTable div p{
 color: #200456;
 font-weight: bold;
+text-align: center;
+font-size: 15px;
+}
+#ichiTable img{
+  display: block;
+  margin: 0 auto;
+}
+#ichiTable p.level{
+  margin-top:0;
+}
+#ichiTable .lastdays{
+  width: 90%;
+  margin: 20px  auto;
+  border: solid 3px #200456;
+  background-color: #fff;
+}
+#ichiTable .lastdays p{
+  font-size: 15px;
+  font-weight: lighter;
+  text-align: right;
+  margin-top: 20px;
+  margin-right: 10%;
+}
+#ichiTable .lastdays p span{
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#ichiTable p.title{
+  font-size:20px;
+  text-align: left;
+  margin-left: 10%; 
+}
+#ichiTable p.dueto{
+  text-align: left;
+  margin-left: 10%;
+}
+
+/*棒グラフ*/
+#ichiTable .graph {
+    position: relative; /* IE is dumb */
+    margin: 0 auto;
+    width: 80%;
+    border: 2px solid #200456;
+    background: #fff;
+    padding: 1px;
+}
+#ichiTable .graph .bar {
+    display: block;
+    position: relative;
+    background: #200456;
+    height: 0.7em;
+    line-height: 2em;
+}
+#ichiTable .graph .bar span { position: absolute; left: 1em; }
+
+/*三角*/
+#ichiTable .graph .bar::after{
+  content:" ";
+  display: block;
+  position:absolute;
+  top: 20px;
+  right: -5px;
+  border-right: 5px solid transparent;
+  border-bottom: 10px solid #200456;
+  border-left: 5px solid transparent; 
 }
 
 /*----------
 タスク入力
 ----------*/
+#FormTable #form_box{
+  margin: 20px auto;
+  padding: 15px 10px;
+  color: #200456;
+  border: 1px solid #200456;
+}
+#FormTable #form_box p{
+  font-size:0.8em;
+  font-weight: bold;
+  margin: 0;
+  vertical-align: middle;
+}
+#FormTable #step1,
+#FormTable #step2{
+  text-align: center;
+  color: #200456;
+}
+#FormTable #step1 h4{
+  margin-top:40px;
+  font-weight: normal;
+  font-size: 20px;
+}
+#FormTable #step1 p{
+  line-height: 1.4;
+}
+#FormTable #step1 a{
+  display: block;
+  margin: 20px auto;
+}
 
+/*吹き出し*/
+#FormTable #step2 .balloon1 {
+ position: relative;
+  display: inline-block;
+  margin: 1.5em 0;
+  padding: 10px 15px;
+  min-width: 120px;
+  max-width: 100%;
+  font-size: 15px;
+  background: #FFF;
+  border: solid 3px #200456;
+  box-sizing: border-box;
+}
+#FormTable #step2 .balloon1:before{
+  content: "";
+  position: absolute;
+  bottom: -24px;
+  left: 50%;
+  margin-left: -15px;
+  border: 12px solid transparent;
+  border-top: 12px solid #FFF;
+  z-index: 2;
+}
+#FormTable #step2 .balloon1:after{
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  margin-left: -17px;
+  border: 14px solid transparent;
+  border-top: 14px solid #200456;
+  z-index: 1;
+}
+#FormTable #step2 .balloon1 p {
+	margin: 0;
+	padding: 0;
+}
+#FormTable #step2 img{
+  width: 160px;
+  height: auto;
+  margin: 5px auto;
+}
+#FormTable #step2 .details p{
+  font-size: 14px;
+  font-weight: normal;
+  padding: 7px 5px;
+  margin: 15px 20px;
+  border: 2px solid #200456;
+}
 
 /*--------
 日々記録
 ---------*/
 #judgeTable div{
+width:60%;
 padding: 0.5em 1em;
-margin: 10px 0;
+margin: 10px auto;
 border: double 10px #200456;
 background-color: #FFF;
 }
-
 #judgeTable h4{
 color: #200456;
 font-weight: bold;
 font-size: 20px;
 text-align: center;
+margin: 0.3em auto; 
 }
-
 #judgeTable p{
 color: #200456;
 text-align: center;
 font-weight: lighter;
 font-size: 15px;
+}
+
+#judgeTable img.monn{
+  display: block;
+  width: 180px;
+  height:auto;
+  margin: 0 auto;
+}
+
+#judgeTable .choices input{
+  border-radius: 50%;
+  margin-right:10px;
+  margin-left:10px;
+  border: solid 3px #200456;
+}
+#judgeTable .choices input:active{
+  background-color: #200456;
+}
+#judgeTable .choices{
+  margin: 15px auto 5px;
+}
+#judgeTable .choices input.btn3{
+  height: 50px;
+  width: 50px;
+}
+#judgeTable .choices input.btn2{
+  position: relative;
+  bottom: 5px;
+  height: 40px;
+  width: 40px;
+}
+#judgeTable .choices input.btn1{
+  position: relative;
+  bottom: 10px;
+  height: 30px;
+  width: 30px;
+}
+#judgeTable .sml{
+  margin: 0 0 10px 0;
+  text-align: center;
+   font-size: 0.7em;
+   color: #200456;
+}
+#judgeTable .sml .s1{
+  position: relative;
+  right: 60px;
+}
+#judgeTable .sml .s2{
+  text-align: center;
+}
+#judgeTable .sml .s3{
+  position: relative;
+  left: 60px;
 }
 
 /*--------
