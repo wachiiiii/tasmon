@@ -188,7 +188,7 @@ function setData(results) {
 	          var last = Math.floor(diff / (1000 * 60 * 60 *24));
             last++;
 
-            var txt = "<div><p>残り" + last + "日" + "</p><p>" + object.get("taskname") +"</p><p>" + "期限:" + jstDate + "</p><p>" +object.get("priority")+"</p></div>";
+            var txt = "<div><p>残り" + last + "日" + "</p><p class='title'>" + object.get("taskname") +"</p><p>" + "期限:" + jstDate + "</p><p>" +object.get("priority")+"</p></div>";
 
             $("#formTable").append(txt);
         }
@@ -600,7 +600,7 @@ function setcoll(results) {
             var pri = object.get("priority");
             var lev = object.get("level");
                 
-            var text = "<div><img src ='../img/com_mon/tasmon"+ pri + "-" + lev +".png'><p>" + object.get("taskname") +"</p><p>" + "タスク完了日:" + jstDate + "</p></div>";
+            var text = "<div><img src ='../img/com_mon/tasmon"+ pri + "-" + lev +".png'><p class='col_name'>" + object.get("taskname") +"</p><p class='col_name'>" + "タスク完了日:" + jstDate + "</p></div>";
 
             $("#collTable").append(text);
         }
