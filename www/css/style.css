@@ -117,12 +117,21 @@ margin: 200px 0px 0px 60px;
 #ichiran{
 background-color: #FFF;
 }
+
 #formTable div{
   margin: 20px 0;
+  padding: 10px 0 10px 0;
   border: solid 3px  #200456;
   background-color:#8177af;
 }
+
+#formTable p.title{
+  font-size: 24px;
+}
+
 #formTable div p{
+margin: 5px 0;
+padding:0 0 0 20px; 
 color: #200456;
 font-weight: bold;
 }
@@ -156,22 +165,32 @@ font-weight: lighter;
 font-size: 15px;
 }
 
-
 /*--------
 コレクション
 ---------*/
 section.ui-content img{
+margin: 0 auto;
+padding: 20px 0 0 0;
 text-align: center;
-width: 130px;
+width: 120px;
 height: auto;
+display: flex;
+align-items: center;
 }
 
 #collTable div{
-width: 140px;
-height: 180px;
-margin: 20px 10px;
-padding: 10px 8px 10px 15px; 
-border: solid #200456;;
+width: 130px;
+height: 150px;
+margin: 20px 8px;
+padding: 20px 10px; 
+border: solid #200456;
 }
 
-/*--------モーダル拡大表示---------*/
+div.slider{
+float: left;
+overflow: hidden;
+}
+
+p.col_name{
+display: none;
+}
